@@ -119,7 +119,8 @@ ağları geliştirilmiştir
 
 -  Bütün mesafeler hesaplandıktan sonra en yakın olan kazanandır
 
--  `Ağırlıklar öğrenme kuralına göre değiştirilir`
+-  `Kazanan düğüme bağlı girdi elemanlarının ağırlıkları değiştirilir`
+![](media/CodeCogsEqn3.gif)
 
 -  Ağırlıklar girdi vektörüne biraz daha yaklaştırılır
 
@@ -252,13 +253,15 @@ Eğitim aşaması
 
     -   ve eğitim için elimizde 4 tane vektör olsun 
 
-    -   (1,1,0,0)
+    -   (1,1,0,0),(0,0,0,1)
 
-    -   (0,0,0,1)
+    -   (1,0,0,0),(0,0,1,1)
 
-    -   (1,0,0,0)
+    -   Örneklenecek küme sayısı 2 olduğundan j = 2
 
-    -   (0,0,1,1)
+    -   İlk öğrenme katsayısı a(0) = 0.6 olarak seçilsin
+    
+    -   İlk çap R = 0
 
 ##  Özörgütlemeli Harita Ağı
 
