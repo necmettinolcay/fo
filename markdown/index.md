@@ -33,13 +33,13 @@ Aynı zamanda bir araç
 
 -   Yani web yazarları için düz metinlerin html karşılığını veren bir araç
 
-##   Görüntü
+##  Görüntü
 
 Çıktı
 :   Aşağıdaki sayfa görüntüsünü almak için
     ![](media/resim3.png)
 
-##   Görüntü
+##  Görüntü
 
 HTML
 :   html kullanarak aşağıdaki gibi yazarken
@@ -51,7 +51,234 @@ Markdown
 :   markdown ile daha kısa yazabiliriz  
     ![](media/resim1.png)
 
-   
+#   Markdown Sözdizimi
 
+##  Blok elementler
+
+-   Paragraf ve boş satır bırakma
+
+-   Başlıklar
+
+-   Alıntılama
+
+-   Listeler
+
+-   Kod blokları
+
+-   Yatay kurallar
+
+##  Paragraf ve alt satıra geçme
+
+-   Markdown yazılan düz metni doğrudan paragraf olarak algılıyor
+
+-   `<p></p>` arasına yazmamıza gerek kalmıyor
+
+-   Bir sonraki paragrafa geçmek için araya 1 satır boşluk bırakıyoruz
+
+-   Alt satırdan devam etmek için metnin sonuna 2(space) boşluk bırakıyoruz.
+
+-   `<br />` görevi görüyor
+
+
+##  Başlıklar
+
+-   Setext stili başlıklar için  
+
+    -  H1 başlık  
+      
+       `Başlık`  
+
+       `======`  
+    
+    -  H2 başlık  
+     
+       `Başlık`  
+
+       `------`
+
+-   Atx stil için
+
+-   `# H1 başlık`
+
+-   `## H2 başlık`
+
+-   `###### H6 başlık`
+
+##  Alıntılama
+
+-   Satır başında e-mail stili `>` karakteri kullanılır 
+    
+-   1 satır boşluk bırakıldığında alıntılamadan çıkar 
+
+-   Aksi takdirde sonraki satırlar için `>` karakterine bakmadan alıntılamaya devam eder
+
+-   İç içe alıntılama için `>>` kullanılır
+
+-   İlk alıntılama bittikten sonra `>>` kullanılırak bir içerdeki alıntılamaya geçilir
+
+-   `> Bu bir alıntıdır` 
+
+-   `>> İçe içe alıntılama`
+
+> Bu bir alıntıdır
+
+>> İç içe alıntılama
+
+##  Listeler
+
+-   Sıralı ve sırasız liste gösterimleri desteklenir
+
+-   Sırasız listeler için
+
+    `+  Alıntılama`
+
+    `*  Listeler`
+
+    `-  Başlıklar`
+
+-   Sırasız(numaralandırılmış) listeler için
+
+    `1.  Alıntılama`
+
+    `2.  Listeler`
+
+-   Liste maddeleri seçilen liste gösterim işaretinden sonra en az 1 boşluk bırakılarak yazılmalıdır
+
+## Kod Blokları
+
+-   Kod blokları yazmak için satır başından 4 boşluk bırakılmalıdır
+   
+        def say
+          puts "foo"
+        end
+
+-   Html karşılığı `<pre><code>**blok**</code></pre` şeklindedir 
+
+##  Yatay Çizgiler
+
+-   Sayfada yatay çizgi çizer
+
+-   Html `<hr />` işlevi
+
+-   3 veya daha fazla `*` veya `-` karakteri kullanılır
+
+-   `***` 
+
+-   `* * *` 
+
+-   `____`
+
+##  Span Elementler
+
+-   Linkler
+
+-   Vurgulamalar
+
+-   Kod 
+
+-   Resimler
+ 
+##  Linkler
+
+-   Markdown ile satır içi ve referans linkler oluşturulabilir
+
+-   Satır içi link `[bağlantı ismi](url "Başlık")` şeklindedir
+
+-   Örnek olarak `[buraya](http://google.com "Başlık")` tıklayınız
+
+Örnek olarak [buraya](http://google.com "Başlık") tıklayınız
+
+-   Html karşılığı 
+
+-   `<p>Örnek olarak <a href="http://google.com" title="Başlık">buraya</a> tıklayınız</p>`   
+
+##  Linkler
+
+-   Referans link `[bağlantı ismi][id]` şeklindedir
+
+-   Örnek olarak `[buraya][1]` tıklayınız
+
+-   id kısmını sayfanın sonlarına doğru tanımlayarak gerekli url bilgisi verilmelidir
+
+-   `[1]: http://google.com "Başlık"`
+
+Örnek olarak [buraya][1] tıklayınız
+
+##  Linkler
+
+-   Ayrıca otomatik link kullanılabilir
+
+-   `< />` içerisine url yazılarak doğrudan link oluşturulabilir
+
+-    `<http://google.com/>`
+
+<http://google.com/>
+
+[1]: http://google.com
+
+##  Vurgulamalar
+
+-   Metin içinde bir kelimeyi vurgulamak(dikkat çekmek) için kullanılır
+
+-   Kelimenin başına ve sonuna `*` veya `_` karakterleri yazılır
+
+-   `*yıldız*` veya daha güçlü(kalın) `**yıldız**`
+
+-   bu şekilde görünür *yıldız* ve **yıldız**
+
+-   `_alt tire_` veya daha güçlü `__alt tire__`
+
+-   bu şekilde görünür  _alt tire_ ve __alt tire__
+
+
+##  Kod
+
+-   Metinlerin içine kod olduğu gibi yazılabilir
+
+-   Html `<code>` elemeti 
+
+-   Genellikle kısa kod ifadeleri için kullanılır
+
+-   \` \` karakterleri arasına yazılır
+
+Örnek 
+
+-   Burada `<div>` etiketi kullanmaya gerek yok
+
+-   Html karşılığı
+
+-   `<p>burada <code>&lt;div&gt;</code> etiketi kullanmaya gerek yok</p>`
+
+##  Resim ekleme
+
+-   Link kullanımına benzer yapısı vardır.Satır içi veya refarans gösterim kullanılabilir
+
+    -  Satır içi
+
+       `![alternatif metin](/resim yolu/resim.uzantı)`
+
+    -  Referans 
+
+       `![alt][id]`
+
+       `[id]: /resim yolu/resim.uzantı`
+
+##  \ Escape karakteri
+
+-   Özel karakterlerin kendi anlamlarını koruyarak markdown sözdiziminin önüne geçmesini sağlar
+
+-   `\` karakteri bu özel karakterlerin önüne gelerek anlamlarını korumasını sağlar
+
+-   Örneğin `\**yıldız**\` yazılarak ** olduğu gibi korunabilir
+
+-   \**yıldız\**
+
+-   Bu karakterler aşağıda listelenmiştir
+
+    -  `\  -   *   _`
+
+    -  `{}  []  ()  #`
+
+    -  `+  -  .  !`
 
 
