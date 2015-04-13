@@ -36,19 +36,19 @@ Aynı zamanda bir araç
 ##  Görüntü
 
 Çıktı
-:   Aşağıdaki sayfa görüntüsünü almak için
+:   Aşağıdaki sayfa görüntüsünü almak için  
     ![](media/resim3.png)
 
 ##  Görüntü
 
 HTML
-:   html kullanarak aşağıdaki gibi yazarken
+:   html kullanarak aşağıdaki gibi yazarken     
     ![](media/resim2.png)
 
 ##   Görüntü
 
 Markdown
-:   markdown ile daha kısa yazabiliriz  
+:   markdown ile daha kısa yazabiliriz    
     ![](media/resim1.png)
 
 #   Markdown Sözdizimi
