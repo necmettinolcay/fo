@@ -2,7 +2,7 @@
 
 .fx: first
 
-Esra ERDEN `11060`
+Esra ERDEN `11060294`
 
 Necmettin Olcay ÖZER `11060296`
 
@@ -19,9 +19,11 @@ Markdown metin işaretleme dilidir
 
 -   Belirli sözdizimi kuralları var
 
--   Zengin metin içeriği olmaya düz metinleri  html kullanmadan markdown ile hızlı bir şekilde yazabiliriz
+-   Zengin metin içeriği olmaya düz metinleri  html kullanmadan markdown ile hızlı bir şekilde yazılabilir
 
 -   Genelde dökümanlarda,açıklama sayfalarında görülür(Github README dosyaları)
+
+-   John Gruber tarafından 2004 yılında Perl dili ile yazılmıştır
 
 ##  Markdown
 
@@ -29,7 +31,7 @@ Aynı zamanda bir araç
 
 -   HTML bir yayın formatı Markdown ise bir yazım formatı
 
--   Yayın için markdown ile yazdıklarımızı html haline getirmemiz gerekme
+-   Yayın için markdown ile yazdıklarımızı html haline getirmemiz gerekmekte
 
 -   Yani web yazarları için düz metinlerin html karşılığını veren bir araç
 
@@ -50,6 +52,14 @@ HTML
 Markdown
 :   markdown ile daha kısa yazabiliriz    
     ![](media/resim1.png)
+
+##  Alternatifleri
+
+-   Sözdizimi karşılaştırması
+
+-   Uygulama özelliklerinin karşılaştırılması
+
+[Buradan](http://en.wikipedia.org/wiki/Lightweight_markup_language) bakınız
 
 #   Markdown Sözdizimi
 
@@ -204,6 +214,8 @@ Markdown
 
 Örnek olarak [buraya][1] tıklayınız
 
+[1]: http://google.com
+
 ##  Linkler
 
 -   Ayrıca otomatik link kullanılabilir
@@ -213,8 +225,6 @@ Markdown
 -    `<http://google.com/>`
 
 <http://google.com/>
-
-[1]: http://google.com
 
 ##  Vurgulamalar
 
@@ -281,4 +291,153 @@ Markdown
 
     -  `+  -  .  !`
 
+##  Sözdiziminde karşılaşılan sorunlar
 
+-   Alt satıra geçmek için satır veya paragraf bittikten sonra 2 veya daha fazla boşluk bırakılır
+
+-   Kod bloğu liste içinde 1 satır boşluktan ve 8 boşluk girintilemeden sonra yazılır
+
+-   Örnek gösterim  
+        
+        def say
+          puts "foo"
+        end
+
+-   Kod blokları içerisinde parse işlemi yapılmaz karakterler escape edilmeden yazılır
+
+##  Sözdiziminde karşılaşılan sorunlar
+
+İç içe liste oluştururken girintileme çok önemli
+
+-   İç içe liste
+
+    -   Bir madde
+
+        -   Alt madde  
+            Pragraf ...  
+            devamı ...  
+            
+            -   Alt maddenin alt maddesi  
+                Paragraf ...  
+                devamı ...
+
+
+       - Diğer alt madde  
+         Paragraf ...  
+         devamı ...  
+
+   -   Diğer madde
+
+##  Markdown Lehçeleri
+
+-   Bir çok dil için markdown gerçeklemesi bulunmaktadır. Ör. Perl,Python,Ruby,Haskell
+
+-   Dolayısıyla her gerçekleme içinde farklı sözdizimleri ve kurallar olması muhtemel
+
+-   Bu farklılıklar ile lehçeler ortaya çıkmış oluyor
+
+[Buradan](http://www.w3.org/community/markdown/wiki/MarkdownImplementations) çeşitli markdown lehçelerini görebilirsiniz
+
+[Buradan](http://johnmacfarlane.net/babelmark2) lehçeler arasındaki farkları deneyerek görebilirsiniz
+
+##  Markdown Lehçeleri
+
+Lehçe              |  Dil     
+---------------    |------------
+Markdown.pl        | `Perl`
+[Pandoc][2]        | `Haskell`
+[Kramdown][3]      | `Ruby`
+[Sundown][4]       | `C`
+[Github Flavor][5] | `Node.js`
+Blackfriday        | `Go`
+Actuarius          | `Scala`
+Misaka             | `Python`
+
+[2]: http://pandoc.org/demo/example9/pandocs-markdown.html
+[3]: http://kramdown.gettalong.org/syntax.html
+[4]: https://github.com/vmg/sundown
+[5]: https://help.github.com/articles/github-flavored-markdown
+
+##  Sözdizimi renklendirmesi
+
+-   Genelde ` ya da ~ karakteri kullanılır
+
+-   Pandoc,Sundown için
+
+![](media/haskell-c.png)
+
+##  Sözdizimi renklendirmesi
+
+-   Nodejs,Python
+
+![](media/nodejs-python.png)
+
+##  Sözdizimi renklendirmesi
+
+-   Ruby,C#
+
+![](media/ruby-c#.png)
+
+##  Markdown Tablo Oluşturma
+
+Python Markdown için
+
+First Header| Second Header
+------------- | -------------
+Content Cell  | Content Cell
+Content Cell  | Content Cell
+
+##  Markdown Tablo Oluşturma
+
+Github Flavor için
+
+![gfm](media/gfmt.png)
+-   Çıktı
+
+![gfm](media/gfm.png)
+
+##  Markdown Tablo Oluşturma
+
+Pandoc için
+ 
+![pandoc](media/pandoct.png)
+
+-   Çıktı
+
+![pandoc](media/pandoc.png)
+
+##  Markdown-PDF
+
+Birkaç yolu var
+
+-   md2pdf
+
+        git clone git://github.com/joequery/md2pdf.git    
+        cd md2pdf  
+        sudo python setup.py install  
+        md2pdf dosya.md
+
+-   Pandoc ile
+
+        sudo apt-get install latex-beamer  
+        pandoc -t beamer -o pdf-dosya.pdf markdown-dosya.md  
+
+##  Markdown-PDF
+
+-   markdown-pdf
+
+        npm install markdown-pdf  
+        sudo npm install -g markdown-pdf  
+        markdown-pdf  dosya.md
+        
+-   markdown2pdf
+
+        phantomjs -v  
+        sudo npm i markdown2pdf -g
+        m2p markdown-dosya.md pdf-dosya.pdf
+
+##  Uygulama
+
+-   Redcarpet Gem'i ile basit markdown işleyiciler oluşturulabilir
+
+[Buradan](https://gist.github.com/aed8558e31524680b651) bir örneğine bakabilirsiniz
