@@ -15,7 +15,7 @@ Nisan 2015
 
 Markdown metin işaretleme dilidir
 
--   İnternet ortamında kolayca okunup yazılabilen düz metinler oluşturmanızı sağlar
+-   Web ortamında kolayca okunup yazılabilen düz metinler oluşturmanızı sağlar
 
 -   Belirli sözdizimi kuralları var
 
@@ -380,31 +380,65 @@ Misaka             | `Python`
 
 ##  Markdown Tablo Oluşturma
 
-Python Markdown için
+-   Python Markdown için
 
-First Header| Second Header
+        First Header  | Second Header
+        ------------- | -------------
+        Content Cell  | Content Cell
+        Content Cell  | Content Cell
+-   Çıktı
+
+First Header  | Second Header
 ------------- | -------------
 Content Cell  | Content Cell
 Content Cell  | Content Cell
 
 ##  Markdown Tablo Oluşturma
 
-Github Flavor için
+-   Github Flavor için
 
-![gfm](media/gfmt.png)
+        | Başlık-1 | Başlık-2 |
+        |:--------:|:--------:|
+        | Hücre-1  | Hücre-2  |
+        | Hücre-3  | Hücre-4  |
+
 -   Çıktı
 
 ![gfm](media/gfm.png)
 
 ##  Markdown Tablo Oluşturma
 
-Pandoc için
- 
-![pandoc](media/pandoct.png)
+-   Pandoc için
 
+          Right  Left   Center  Default
+        -------  ----- -------- -------
+             12   12     12       12
+            123   123    123      123
+              1   1      1        1    
 -   Çıktı
 
 ![pandoc](media/pandoc.png)
+
+##  Markdown Tablo Oluşturma
+
+-   Kramdown için
+
+        |-----------------+------------|
+        | Varsayılan      | Sol        | 
+        |-----------------|-----------:|
+        | Gövde-1         | Satır-1    | 
+        | Satır-2         | Satır-2    | 
+        | Satır-3         | Satır-3    | 
+        |-----------------+------------|
+        | Gövde-2         | Satır-1    |    
+        | Satır-2         | Satrı-2    |            
+        |=================+============|
+        | Footer          |            |                
+        |-----------------+------------|
+
+-   Çıktı
+
+![](media/kramdown.png)
 
 ##  Markdown-PDF
 
