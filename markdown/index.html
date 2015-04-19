@@ -3320,8 +3320,11 @@ md2pdf dosya.md
 </li>
 <li>
 <p>Pandoc ile</p>
-<pre><code>sudo apt-get install latex-beamer  
-pandoc -t beamer -o pdf-dosya.pdf markdown-dosya.md
+<pre><code>sudo apt-get install pandoc nbibtex texlive-latex-base  
+  texlive-latex-recommended texlive-latex-extra    
+  preview-latex-style dvipng texlive-fonts-recommended
+
+pandoc markdown-dosya.md -s -o pdf-dosya.pdf
 </code></pre>
 </li>
 </ul></section>
@@ -3355,18 +3358,8 @@ pandoc -t beamer -o pdf-dosya.pdf markdown-dosya.md
             
             
             <section><ul>
-<li>
-<p>markdown-pdf</p>
-<pre><code>npm install markdown-pdf  
-sudo npm install -g markdown-pdf  
+<li>markdown-pdf<pre><code>npm install -g markdown-pdf   
 markdown-pdf  dosya.md
-</code></pre>
-</li>
-<li>
-<p>markdown2pdf</p>
-<pre><code>phantomjs -v  
-sudo npm i markdown2pdf -g
-m2p markdown-dosya.md pdf-dosya.pdf
 </code></pre>
 </li>
 </ul></section>

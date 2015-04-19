@@ -451,22 +451,18 @@ Birkaç yolu var
 
 -   Pandoc ile
 
-        sudo apt-get install latex-beamer  
-        pandoc -t beamer -o pdf-dosya.pdf markdown-dosya.md  
+        sudo apt-get install pandoc nbibtex texlive-latex-base  
+          texlive-latex-recommended texlive-latex-extra    
+          preview-latex-style dvipng texlive-fonts-recommended  
+
+        pandoc markdown-dosya.md -s -o pdf-dosya.pdf   
 
 ##  Markdown-PDF
 
 -   markdown-pdf
 
-        npm install markdown-pdf  
-        sudo npm install -g markdown-pdf  
+        npm install -g markdown-pdf   
         markdown-pdf  dosya.md
-        
--   markdown2pdf
-
-        phantomjs -v  
-        sudo npm i markdown2pdf -g
-        m2p markdown-dosya.md pdf-dosya.pdf
 
 ##  Uygulama
 
