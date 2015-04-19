@@ -374,7 +374,7 @@ Misaka             | `Python`
 
 -   Ruby,C#
 
-![](media/ruby-c#-1.png)
+![](media/ruby1.png)
 
 ##  Markdown Tablo Oluşturma
 
