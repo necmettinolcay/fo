@@ -303,7 +303,7 @@ Markdown
           puts "foo"
         end
 
--   Kod blokları içerisinde parse işlemi yapılmaz karakterler escape edilmeden yazılır
+-   Kod blokları içerisinde ayrıştırılma yapılmaz karakterler olduğu gibi yazılır
 
 ##  Sözdiziminde karşılaşılan sorunlar
 
@@ -311,9 +311,9 @@ Markdown
 
 -   İç içe liste
 
-    -   Bir madde
+    -   Bir madde(4 boşluk)  
 
-        -   Alt madde  
+        -   Alt madde(8 boşluk)    
             Pragraf ...  
             devamı ...  
             
@@ -337,8 +337,6 @@ Markdown
 -   Bu farklılıklar ile lehçeler ortaya çıkmış oluyor
 
 [Buradan](http://www.w3.org/community/markdown/wiki/MarkdownImplementations) çeşitli markdown lehçelerini görebilirsiniz
-
-[Buradan](http://johnmacfarlane.net/babelmark2) lehçeler arasındaki farkları deneyerek görebilirsiniz
 
 ##  Markdown Lehçeleri
 
