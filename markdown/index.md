@@ -19,7 +19,7 @@ Markdown metin işaretleme dilidir
 
 -   Belirli sözdizimi kuralları var
 
--   Zengin metin içeriği olmaya düz metinleri  html kullanmadan markdown ile hızlı bir şekilde yazılabilir
+-   Zengin metin içeriği olmayan düz metinleri  html kullanmadan markdown ile hızlı bir şekilde yazılabilir
 
 -   Genelde dökümanlarda,açıklama sayfalarında görülür(Github README dosyaları)
 
@@ -146,7 +146,7 @@ Markdown
 
     `-  Başlıklar`
 
--   Sırasız(numaralandırılmış) listeler için
+-   Sıralı(numaralandırılmış) listeler için
 
     `1.  Alıntılama`
 
